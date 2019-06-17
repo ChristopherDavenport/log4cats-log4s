@@ -25,15 +25,15 @@ lazy val docs = project.in(file("docs"))
     "lorandszakacs"        -> "Loránd Szakács"
   )
 
-val catsV = "1.6.0"
-val catsEffectV = "1.2.0"
+val catsV = "2.0.0-M4"
+val catsEffectV = "2.0.0-M4"
 val log4sV = "1.7.0"
 
-val log4catsV = "0.3.0"
+val log4catsV = "0.4.0-M1"
 
 val specs2V = "4.5.1"
 
-val kindProjectorV = "0.10.0"
+val kindProjectorV = "0.10.3"
 val betterMonadicForV = "0.3.0"
 
 // General Settings
@@ -41,7 +41,7 @@ lazy val commonSettings = Seq(
   organization := "io.chrisdavenport",
 
   scalaVersion := "2.12.8",
-  crossScalaVersions := Seq(scalaVersion.value, "2.11.12"),
+  crossScalaVersions := Seq("2.13.0", scalaVersion.value, "2.11.12"),
   scalacOptions += "-Yrangepos",
 
   scalacOptions in (Compile, doc) ++= Seq(
