@@ -2,7 +2,7 @@ import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
 
 lazy val `log4cats-log4s` = project.in(file("."))
   .settings(commonSettings, releaseSettings, skipOnPublishSettings)
-  .aggregate(coreJVM, coreJS, docs)
+  .aggregate(coreJVM, coreJS)
 
 lazy val coreJVM = core.jvm
 lazy val coreJS = core.js
